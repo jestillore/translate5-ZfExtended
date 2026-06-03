@@ -114,7 +114,7 @@ class ZfExtended_Models_Validator_User extends ZfExtended_Models_Validator_Abstr
      */
     private function setLoginValidator(): void
     {
-        $regexValidator = new Zend_Validate_Regex('/^[\w\-_@.]+$/u');
+        $regexValidator = new Zend_Validate_Regex('/^[\w\-_@.+]+$/u');
         $regexValidator->setMessage('Der Benutzername enthält Zeichen, die nicht verwendet werden dürfen!', Zend_Validate_Regex::NOT_MATCH);
 
         $chain = new Zend_Validate();
